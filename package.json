@@ -1,0 +1,29 @@
+{
+  "name": "llm-compare",
+  "version": "0.0.1",
+  "description": "Compare LLM models based on series of questions and expected answers",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx index.ts",
+    "test": "tsx cache-test.ts"
+  },
+  "author": "Benjamin Kaiser",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^1.0.2",
+    "@ai-sdk/azure": "^1.0.7",
+    "@ai-sdk/google": "^1.0.3",
+    "@ai-sdk/google-vertex": "^1.0.3",
+    "@ai-sdk/openai": "^1.0.4",
+    "ai": "^4.0.4",
+    "colors": "^1.4.0",
+    "colors.ts": "^1.0.20",
+    "diff": "^7.0.0",
+    "sqlite-kvs": "^0.0.6",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
+}
