@@ -1,0 +1,543 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  </head>
+  <body>
+  
+    <h2>Obscure Verse Recall</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>Just as you have drunk on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>The people of the city of Tahpanhes will be destroyed and laid waste.</td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>For the day of the Lord is near for all nations. As you have done, it will be done to you; your deeds will return upon your own head.</td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>For as you have drunk on my holy hill, so all the nations will drink continually; they will drink and swallow, and they will be as if they had never been.</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>As you have drunk on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.
+</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>For as you have drunk on my holy mountain, so shall all the nations drink continually; they shall drink and swallow, and they shall become as though they had never been.
+</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>As you have drunk on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.
+</td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>❌</td>
+            <td>Just as you drank on my holy hill, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+            <td>As you have drunk on my holy mountain, so all the nations will drink continually; they will drink and drink and be as if they had never been.</td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+    <h2>Popular Verse Recall</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>❌</td>
+            <td>For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</td>
+            <td>For God so loved the world that he gave his one and only begotten Son, that whoever believes in him shall not perish but have eternal life.</td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+    <h2>Verse Continuation</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>❌</td>
+            <td>For the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them off from executing the priest's office unto the LORD</td>
+            <td>For Hezekiah appointed the courses of the priests and the Levites after their courses, every man according to his service, both the priests and the Levites for burnt offerings and for to offer the peace offerings, and for to minister, and for all the work of the service of the house of the Lord, and for all the work of the service in the house of the Lord.</td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>❌</td>
+            <td>For the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them off from executing the priest's office unto the LORD</td>
+            <td>And the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them off, that they should not execute the priest's office unto the LORD.</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>❌</td>
+            <td>For the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them off from executing the priest's office unto the LORD</td>
+            <td>For the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for their bread was not found.
+</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>❌</td>
+            <td>For the Levites left their suburbs and their possession, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them off from executing the priest's office unto the LORD</td>
+            <td>For they left their suburbs and their possessions, and came to Judah and Jerusalem: for Jeroboam and his sons had cast them out from executing the priest's office unto the LORD:</td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+    <h2>Verse Block Recall</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>❌</td>
+            <td>Remembering mine affliction and my misery, The wormwood and the gall. My soul hath them still in remembrance, And is humbled in me. This I recall to my mind, Therefore have I hope. It is of the LORD's mercies that we are not consumed, Because his compassions fail not. They are new every morning: Great is thy faithfulness. The LORD is my portion, saith my soul; Therefore will I hope in him.</td>
+            <td>I am the man that hath seen affliction by the rod of his wrath. He hath led me, and caused me to walk in darkness, and not in the light. Surely against me he turneth his hand continually all the day. My flesh is clothed with worms and clods of dust; my skin is broken, and become loathsome. I am become a reproach unto them: they look upon me. He hath cast me into the mire, and I am become a marrow to them. He hath hedged me about with bars of his own heart: he hath made my paths crooked.</td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>❌</td>
+            <td>Remembering mine affliction and my misery, The wormwood and the gall. My soul hath them still in remembrance, And is humbled in me. This I recall to my mind, Therefore have I hope. It is of the LORD's mercies that we are not consumed, Because his compassions fail not. They are new every morning: Great is thy faithfulness. The LORD is my portion, saith my soul; Therefore will I hope in him.</td>
+            <td>Remembering mine affliction and my misery, the wormwood and the gall.  My soul hath them still in remembrance, and is humbled in me.  This I recall therefore will I hope.  It is of the Lord’s mercies that we are not consumed, because his compassions fail not.  They are new every morning: great is thy faithfulness.  The Lord is my portion, saith my soul; therefore will I hope in him.
+</td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>❌</td>
+            <td>Remembering mine affliction and my misery, The wormwood and the gall. My soul hath them still in remembrance, And is humbled in me. This I recall to my mind, Therefore have I hope. It is of the LORD's mercies that we are not consumed, Because his compassions fail not. They are new every morning: Great is thy faithfulness. The LORD is my portion, saith my soul; Therefore will I hope in him.</td>
+            <td>Remember my affliction and my misery, the wormwood and the gall. My soul hath them still in remembrance, and is humbled in me. This I recall to my mind, therefore have I hope. It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.</td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+    <h2>Query Based Lookup</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+    <h2>Entire Chapter Recall</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      
+          <tr>
+            <td>Llama 3.1 405B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.1 8B</td>
+            <td>❌</td>
+            <td>What shall we say then? Shall we continue in sin, that grace may abound? God forbid. How shall we, that are dead to sin, live any longer therein? Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death? Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life. For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection: knowing this, that our old man is crucified with him, that the body of sin might be destroyed, that henceforth we should not serve sin. For he that is dead is freed from sin. Now if we be dead with Christ, we believe that we shall also live with him: knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him. For in that he died, he died unto sin once: but in that he liveth, he liveth unto God. Likewise reckon ye also yourselves to be dead indeed unto sin, but alive unto God through Jesus Christ our Lord. Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof. Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God. For sin shall not have dominion over you: for ye are not under the law, but under grace. What then? shall we sin, because we are not under the law, but under grace? God forbid. Know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness? But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you. Being then made free from sin, ye became the servants of righteousness. I speak after the manner of men because of the infirmity of your flesh: for as ye have yielded your members servants to uncleanness and to iniquity unto iniquity; even so now yield your members servants to righteousness unto holiness. For when ye were the servants of sin, ye were free from righteousness. What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death. But now being made free from sin, and become servants to God, ye have your fruit unto holiness, and the end everlasting life. For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</td>
+            <td>What shall we say then? Shall we continue in sin, that grace may abound? God forbid. How shall we, that are dead to sin, live any longer therein? Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death? Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life. For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection: knowing this, that our old man is crucified with him, that the body of sin might be destroyed, that henceforth we should not serve sin. For he that is dead is freed from sin. Now if we be dead with Christ, we believe that we shall also live with him: knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him. For in that he died, he died unto sin once: but in that he liveth, he liveth unto God. Likewise reckon ye also yourselves to be dead indeed unto sin, but alive unto God in Christ Jesus our Lord. Let not sin therefore reign in your mortal body, that ye should obey the same; neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God. For sin shall not have dominion over you: for ye are not under the law, but under grace. What then? shall we sin, because we are not under the law, but under grace? God forbid. What then? know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness? But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you. Being then made free from sin, ye became the servants of righteousness. I speak after the manner of men because of the infirmity of your flesh: for as ye have yielded your members servants to uncleanness and to iniquity unto iniquity; even so now yield your members servants to righteousness unto holiness. For when ye were the servants of sin, ye were free from righteousness. What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death. But now being made free from sin, and become servants to God, ye have your fruit unto holiness, and the end everlasting life. For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</td>
+          </tr>
+        
+          <tr>
+            <td>Llama 3.3 70B</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>GPT 4o mini</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 1.5 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Gemini 2.0 Flash</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Haiku</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>✅</td>
+            <td></td>
+            <td></td>
+          </tr>
+        
+    </table>
+  
+  </body>
+  </html>
+  

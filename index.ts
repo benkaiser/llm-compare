@@ -8,6 +8,9 @@ import * as config from './config.json';
 import * as Diff from 'diff';
 import * as Colors from 'colors.ts';
 import { getCacheMiddleware } from './cachedModel';
+import fs from 'fs';
+import path from 'path';
+
 
 Colors.enable();
 
@@ -73,6 +76,11 @@ const providers = [
     model: google('gemini-1.5-flash-latest')
   },
   {
+    name: 'Gemini 2.0 Flash',
+    creator: 'Google',
+    model: google('gemini-2.0-flash-exp')
+  },
+  {
     name: 'Claude 3.5 Haiku',
     creator: 'Anthropic',
     model: anthropic('claude-3-5-haiku-latest')
@@ -127,6 +135,66 @@ Promise.all(config.tests.map(async test => {
     table.push([provider.name, ...results.filter(result => result.model === provider.name).map(result => result.pass ? '✅' : '❌')]);
   });
   console.table(table);
+  // Write a HTML file, with multiple tables, one for each test, showing the model in one column, and a check or cross in the second column
+  const html = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+  </head>
+  <body>
+  ${config.tests.map(test => `
+    <h2>${test.name}</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+      </tr>
+      ${providers.map(provider => `
+        <tr>
+          <td>${provider.name}</td>
+          <td>${results.find(result => result.model === provider.name && result.expected === test.answer)?.pass ? '✅' : '❌'}</td>
+        </tr>
+      `).join('')}
+    </table>
+  `).join('')}
+  </body>
+  </html>
+  `;
+  fs.writeFileSync('results.html', html);
+
+  // now output the same file, but also include the expected and actual responses where a test failed
+  const htmlWithResponses = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+  </head>
+  <body>
+  ${config.tests.map(test => `
+    <h2>${test.name}</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pass</th>
+        <th>Expected</th>
+        <th>Response</th>
+      </tr>
+      ${providers.map(provider => {
+        const result = results.find(result => result.model === provider.name && result.expected === test.answer);
+        return `
+          <tr>
+            <td>${provider.name}</td>
+            <td>${result?.pass ? '✅' : '❌'}</td>
+            <td>${result && !result.pass ? result.expected : ''}</td>
+            <td>${result && !result.pass ? result.response : ''}</td>
+          </tr>
+        `;
+      }).join('')}
+    </table>
+  `).join('')}
+  </body>
+  </html>
+  `;
+  fs.writeFileSync('results-with-responses.html', htmlWithResponses);
 
   // print the responses vs expected for each test grouped by model
   providers.forEach(provider => {
