@@ -144,6 +144,7 @@ Promise.all(config.tests.map(async test => {
   <body>
   ${config.tests.map(test => `
     <h2>${test.name}</h2>
+    <p>${test.prompt}</p>
     <table>
       <tr>
         <th>Model</th>
@@ -171,6 +172,7 @@ Promise.all(config.tests.map(async test => {
   <body>
   ${config.tests.map(test => `
     <h2>${test.name}</h2>
+    <p>${test.prompt}</p>
     <table>
       <tr>
         <th>Model</th>
